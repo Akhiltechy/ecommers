@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="register" method="post">
+    {% csrf_token %}
+<input type="text" name="n1" placeholder="enter your username"><br>
+<input type="text" name="n2" placeholder="enter your first name"><br>
+<input type="text" name="n3" placeholder="enter your last name"><br>
+<input type="text" name="n4" placeholder="enter your email"><br>
+<input type="text" name="n5" placeholder="enter your password"><br>
+<input type="text" name="n6" placeholder="Re-enter your password"><br>
+<input type="submit" value="Register">
+</form>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+</body>
+</html>
